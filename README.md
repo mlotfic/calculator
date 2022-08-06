@@ -9,14 +9,14 @@ Building a python package using simple calculator program
 - How to check for code quailty and styling using pylint on python program?
 - How to using GitHub Action :
   1. Publish Python Package 
-    - By GitHub Actions
-    - Publish a Python Package to PyPI on release.
+       - By GitHub Actions
+       - Publish a Python Package to PyPI on release.
   2.  Pylint   
-    - By GitHub Actions
-    - Lint a Python application with pylint.
+        - By GitHub Actions
+        - Lint a Python application with pylint.
   3. Python application
-   - By GitHub Actions
-   - Create and test a Python application.
+      - By GitHub Actions
+      - Create and test a Python application.
   4. Python package
-   - By GitHub Actions
-   - Create and test a Python package on multiple Python versions.
+      - By GitHub Actions
+      - Create and test a Python package on multiple Python versions.
