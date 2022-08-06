@@ -20,3 +20,15 @@ Building a python package using simple calculator program
   4. Python package
       - By GitHub Actions
       - Create and test a Python package on multiple Python versions.
+
+## Program Structure 
+### Displaying Interface Options
+```py
+    # print the calculator interface
+    print("Select operation::")
+    print("0. Exit")
+    print("1. Add (+) ")
+    print("2. Subtract (-)")
+    print("3. Multiply (*)")
+    print("4. Divide (/)")
+```
