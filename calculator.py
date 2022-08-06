@@ -59,5 +59,5 @@ while True:
         print("Invalid Input, please try again")
 
 if __name__ == '__main__':
-    instance = Calculator(1, 2)
-    print(instance.add())
+    cal_obj = Calculator(1, 2)
+    print(cal_obj.add())
