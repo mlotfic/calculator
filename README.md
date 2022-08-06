@@ -22,6 +22,7 @@ Building a python package using simple calculator program
       - Create and test a Python package on multiple Python versions.
 
 ## Program Structure 
+
 ### Displaying Interface Options
 ```py
     # print the calculator interface
@@ -87,3 +88,72 @@ Building a python package using simple calculator program
             return self.x / self.y
 ```
 
+## Unit Testing
+
+## A Typical directory structure for running tests using `pytest`
+
+Ref : [stackoverflow](http://stackoverflow.com/a/24266885)
+
+The best solution in my opinion is to use the `unittest` [command line interface][1] 
+which will add the directory to the ``sys.path`` so you don't have to (done in the `TestLoader` class).
+
+For example for a directory structure like this:
+
+    cal_project
+    ├── calculator.py
+    └── test_calculator.py
+
+You can just run:
+
+    $ cd new_project
+    $ python -m pytest test_antigravity
+
+For a directory structure like yours:
+
+    new_project
+    ├── antigravity
+    │   ├── __init__.py         # make it a package
+    │   └── antigravity.py
+    └── test
+        ├── __init__.py         # also make test a package
+        └── test_antigravity.py
+
+And in the test modules inside the `test` package, you can import the `antigravity` package and its modules as usual:
+
+    # import the package
+    import antigravity
+
+    # import the antigravity module
+    from antigravity import antigravity
+
+    # or an object inside the antigravity module
+    from antigravity.antigravity import my_object
+
+**Running a single test module:**
+
+To run a single test module, in this case `test_antigravity.py`:
+
+    $ cd new_project
+    $ python -m unittest test.test_antigravity
+
+Just reference the test module the same way you import it.
+
+**Running a single test case or test method:**
+
+Also you can run a single `TestCase` or a single test method:
+
+    $ python -m unittest test.test_antigravity.GravityTestCase
+    $ python -m unittest test.test_antigravity.GravityTestCase.test_method
+
+**Running all tests:**
+
+You can also use [test discovery][2] which will discover and run all the tests for you, they must be modules or packages named `test*.py` (can be changed with the `-p, --pattern` flag):
+
+    $ cd new_project
+    $ python -m unittest discover
+
+This will run all the `test*.py` modules inside the `test` package.
+
+
+  [1]: https://docs.python.org/2/library/unittest.html#command-line-interface
+  [2]: https://docs.python.org/2/library/unittest.html#test-discovery
