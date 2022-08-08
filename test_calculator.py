@@ -4,10 +4,7 @@ Created on Tue Aug  2 22:00:25 2022
 
 @author: mahmoud lotfi
 """
-
-
 from calculator import Calculator
-import pytest
 
 # tests addition method in Calculator
 def test_add():
@@ -19,17 +16,17 @@ def test_add():
 def test_sub():
     x,y = 1,2
     cal = Calculator(x, y)
-    assert cal.sub() == x + y, "subtraction method doesn't work"
+    assert cal.sub() == x - y, "subtraction method doesn't work"
 
 # tests multiplication method in Calculator
-def test_sub():
+def test_mul():
     x,y = 1,2
     cal = Calculator(x, y)
-    assert cal.mul() == x + y, "multiplication method doesn't work"    
+    assert cal.mul() == x * y, "multiplication method doesn't work"    
 
 # tests division method in Calculator
-def test_sub():
+def test_div():
     x,y = 1,2
     cal = Calculator(x, y)
-    assert cal.div() == x + y, "division method doesn't work"
+    assert cal.div() == x / y, "division method doesn't work"
 
