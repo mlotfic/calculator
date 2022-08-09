@@ -1,0 +1,14 @@
+langauge : python
+python:
+  - 3.10
+  - 3.9
+
+script:
+ - pytest
+
+notifications:
+  email:
+    recipients:
+      - aem6236@gmail.com
+    on_success: never
+    on_failure: always
