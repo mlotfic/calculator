@@ -45,5 +45,3 @@ Building a python package using simple calculator program
         def div(self):
             return self.x / self.y
 ```
-
-## Unit Testing
